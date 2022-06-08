@@ -1,0 +1,56 @@
+{
+  "name": "Bilibili Video Bookmarks",
+  "version": "0.1.0",
+  "description": "Saving timestamps in Bilibili videos",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "icons": {
+    "16": "assets/ext-icon.png",
+    "48": "assets/ext-icon.png",
+    "128": "assets/ext-icon.png"
+  },
+  "host_permissions": [
+    "https://*.bilibili.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.bilibili.com/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "css": [
+        "assets/content.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/bookmark.png",
+        "assets/play.png",
+        "assets/delete.png",
+        "assets/save.png"
+      ],
+      "matches": [
+        "https://*.bilibili.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon-disable.png",
+      "24": "assets/ext-icon-disable.png",
+      "32": "assets/ext-icon-disable.png"
+    },
+    "default_title": "Bilibili Video Bookmarks",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
+}

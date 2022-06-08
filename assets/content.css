@@ -1,0 +1,31 @@
+.ytp-button.bookmark-btn {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.ytb-success {
+  animation: fade 0.3s cubic-bezier(.15,.26,.06,1.09);
+  background-color: #f0f9eb;
+  border: 1px solid #e1f3d8;
+  border-radius: 4px;
+  color: #67c23a;
+  font-size: 16px;
+  height: 30px;
+  left: 50%;
+  line-height: 30px;
+  position: fixed;
+  text-align: center;
+  top: 5vh;
+  transform: translateX(-50%);
+  width: 200px;
+  z-index: 99999;
+}
+
+@keyframes fade {
+  0% {
+    top: 0vh;
+  }
+  100% {
+    top: 5vh;
+  }
+}
